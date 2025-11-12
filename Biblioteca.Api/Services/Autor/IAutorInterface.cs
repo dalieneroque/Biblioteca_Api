@@ -1,4 +1,5 @@
-﻿using Biblioteca_Api.Models;
+﻿using Biblioteca_Api.Dto.Autor;
+using Biblioteca_Api.Models;
 
 namespace Biblioteca_Api.Services.Autor
 {
@@ -7,5 +8,8 @@ namespace Biblioteca_Api.Services.Autor
         Task<ResponseModel<List<AutorModel>>> ListarAutores();
         Task<ResponseModel<AutorModel>> BuscarAutorPorId(int idAutor);
         Task<ResponseModel<AutorModel>> BuscarAutorPorIdLivro(int idLivro);
+        Task<ResponseModel<List<AutorModel>>> CriarAutor(AutorCriacaoDto autorCriacaoDto);
+
+
     }
 }
