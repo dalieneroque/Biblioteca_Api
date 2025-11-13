@@ -37,9 +37,23 @@ namespace Biblioteca.Api.Controllers
         }
 
         [HttpPost("CriarAutor")]
-        public async Task<ActionResult<ResponseModel<AutorModel>>> CriarAutor(AutorCriacaoDto autorCriacaoDto)
+        public async Task<ActionResult<ResponseModel<List<AutorModel>>>> CriarAutor(AutorCriacaoDto autorCriacaoDto)
         {
             var autores = await _autorInterface.CriarAutor(autorCriacaoDto);
+            return Ok(autores);
+        }
+
+        [HttpPut("EditarAutor")]
+        public async Task<ActionResult<ResponseModel<List<AutorModel>>>> EditarAutor(AutorEdicaoDto autorEdicaoDto)
+        {
+            var autores = await _autorInterface.EditarAutor(autorEdicaoDto);
+            return Ok(autores);
+        }
+
+        [HttpDelete("DeletarAutor/{idAutor}")]
+        public async ActionResult<ResponseModel<AutorModel>> DeletarAutor(int idAutor)
+        {
+            var autores = await _autorInterface.DeletarAutor(idAutor);
             return Ok(autores);
         }
     }
