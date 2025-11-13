@@ -18,8 +18,36 @@ A aplicação segue os princípios de uma **API RESTful**, permitindo realizar o
 ---
 
 ## 📁 Estrutura do Projeto
-
 🛠️ Em formação...
+
+```text
+Biblioteca_Api/
+├── 📂 Controllers/
+│   ├── AutorController.cs
+│   └── LivroController.cs
+├── 📂 Models/
+│   ├── AutorModel.cs
+│   └── LivroModel.cs
+├── 📂 Dto/
+│   ├── Autor/
+│   │   ├── AutorCriacaoDto.cs
+│   │   └── AutorEdicaoDto.cs
+│   └── Livro/
+│       ├── LivroCriacaoDto.cs
+│       └── LivroEdicaoDto.cs
+├── 📂 Services/
+│   ├── Autor/
+│   │   ├── IAutorInterface.cs
+│   │   └── AutorService.cs
+│   └── Livro/
+│       ├── ILivroInterface.cs
+│       └── LivroService.cs
+├── 📂 Data/
+│   └── AppDbContext.cs
+├── 📂 Migrations/
+├── appsettings.json
+└── Program.cs
+```
 
 ---
 
@@ -40,7 +68,7 @@ Sinta-se à vontade para clonar, modificar e expandir conforme necessário.
 ## 👩‍💻 Desenvolvido por Daliene Nonato Lima Roque
 
 ### 📫 Contato:
-### 🌐 Contatos
+
 
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DalieneRoque)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daliene-nonato-lima-roque-a5b167269/)
