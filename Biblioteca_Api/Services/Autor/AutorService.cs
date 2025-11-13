@@ -123,5 +123,63 @@ namespace Biblioteca_Api.Services.Autor
             }
             return resposta;
         }
+
+        public async Task<ResponseModel<List<AutorModel>>> EditarAutor()
+        {
+            ResponseModel<List<AutorModel>> resposta = new ResponseModel<List<AutorModel>>();
+
+            try
+            {
+                var autor = await _context.Autores.FirstOrDefaultAsync(autorBanco => autorBanco.Id == idAutor);
+                if (autor == null)
+                {
+                    resposta.Mensagem = "Autor não encontrado.";
+                    return resposta;
+                }
+                autor.Nome = autorEdicaoDto.Nome;
+                autor.Sobrenome = autorEdicaoDto.Sobrenome;
+                _context.Update(autor);
+                await _context.SaveChangesAsync();
+                resposta.Dados = await _context.Autores.ToListAsync();
+                resposta.Mensagem = "Autor editado com sucesso.";
+                return resposta;
+            }
+            catch (Exception ex)
+            {
+                resposta.Mensagem = ex.Message;
+                resposta.Status = false;
+                return resposta;
+            }
+
+
+        }
+
+        public async Task<ResponseModel<List<AutorModel>>> DeletarAutor(int idAutor)
+        {
+            ResponseModel<List<AutorModel>> resposta = new ResponseModel<List<AutorModel>>();
+
+            try
+            {
+                var autor = await _context.Autores.FirstOrDefaultAsync(autorBanco => autorBanco.Id == idAutor);
+                if (autor == null)
+                {
+                    resposta.Mensagem = "Autor não encontrado.";
+                    return resposta;
+                }
+
+                _context.Autores.Remove(autor);
+                await _context.SaveChangesAsync();
+                resposta.Dados = await _context.Autores.ToListAsync();
+                resposta.Mensagem = "Autor deletado com sucesso.";
+                return resposta;
+            }
+            catch (Exception ex)
+            {
+                resposta.Mensagem = ex.Message;
+                resposta.Status = false;
+                return resposta;
+            }
+        }
+       
     }
 }
