@@ -1,5 +1,6 @@
 using Biblioteca_Api.Data;
 using Biblioteca_Api.Services.Autor;
+using Biblioteca_Api.Services.Livro;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,9 @@ builder.Services.AddSwaggerGen();
 
 // Registrando o AutorService para a interface IAutorInterface
 builder.Services.AddScoped<IAutorInterface, AutorService>();
+
+// Registrando o LivroService para a interface ILivroInterface
+builder.Services.AddScoped<ILivroInterface, LivroService>();
 
 // Configurando o DbContext com a string de conexão do appsettings.json
 builder.Services.AddDbContext<AppDbContext>(options =>
