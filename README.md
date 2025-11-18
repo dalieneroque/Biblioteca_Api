@@ -1,13 +1,32 @@
 # 📚 Biblioteca Web API
 
+![2025-11-17 21-38-42](https://github.com/user-attachments/assets/385b938e-5f74-4189-ad3a-9b7eba5e4f74)
+
 ## 🧩 Descrição do Projeto
 
 A **Biblioteca Web API** é um projeto desenvolvido em **.NET 8** com o objetivo de gerenciar informações de **autores** e **livros**.  
-A aplicação segue os princípios de uma **API RESTful**, permitindo realizar operações **CRUD** (Create, Read, Update, Delete) sobre as entidades **Autor** e **Livro**, com persistência dos dados em um banco **SQL Server**.
+A aplicação segue os princípios de uma **API RESTful**, permitindo realizar operações **CRUD** (Create, Read, Update, Delete) sobre as entidades **Autor** e **Livro**, com persistência dos dados em um banco **SQL Server**. <br>
+📚 **O que foi desenvolvido:**
+
+- CRUD completo de Autores
+
+- CRUD completo de Livros
+
+- Relacionamento entre Autores e Livros
+
+- Uso de DTOs para padronização da transferência de dados
+
+- Arquitetura organizada em Controllers, Services e Repository
+
+- Documentação da API com Swagger/OpenAPI
+
+- Banco de dados configurado com Entity Framework + SQL Server
+
+- Injeção de dependência configurada em toda a aplicação
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
 - **.NET 8 Web API**
 - **C#**
@@ -18,7 +37,6 @@ A aplicação segue os princípios de uma **API RESTful**, permitindo realizar o
 ---
 
 ## 📁 Estrutura do Projeto
-🛠️ Em formação...
 
 ```text
 Biblioteca_Api/
@@ -53,8 +71,9 @@ Biblioteca_Api/
 
 ## 🧠 Endpoints Disponíveis
 
-<img width="850" height="427" alt="{926075AC-E67C-44F4-A00C-4B5B04492044}" src="https://github.com/user-attachments/assets/f02ab891-7de4-47d3-9ca6-e4f795ffd587" />
-<img width="856" height="386" alt="{0BC3B1BE-F8E1-4ADE-92E9-56C35E8E8DC3}" src="https://github.com/user-attachments/assets/733f6b11-57b4-4cef-83d3-15cf1bee164d" />
+<img width="1339" height="352" alt="{0F03DE42-5479-41D6-A11F-1F5E48C35F48}" src="https://github.com/user-attachments/assets/00fd9768-5b90-4d8b-b7d8-8027e2b125b4" />
+<img width="1325" height="347" alt="{402B43AE-007B-4D21-BF74-AF93EA0364A3}" src="https://github.com/user-attachments/assets/597cec5f-96b9-4d3b-a1c4-430d283a685f" />
+
 
 ---
 
@@ -66,6 +85,8 @@ Sinta-se à vontade para clonar, modificar e expandir conforme necessário.
 ---
 
 ## 👩‍💻 Desenvolvido por Daliene Nonato Lima Roque
+Agradecimento especial:
+Quero reconhecer e agradecer à professora Crislaine D'Paula, cuja didática e apoio foram fundamentais para a construção deste projeto. Sua orientação foi essencial para o meu aprendizado e progresso.
 
 ### 📫 Contato:
 
